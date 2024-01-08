@@ -9,8 +9,8 @@ ffmpeg.setFfmpegPath(ffmpegInstaller.path);
 
 const storage = new Storage();
 
-const rawVideoBucketName = "raw-videos";
-const processedVideoBucketName = "processed-videos";
+const rawVideoBucketName = "yt-cln-raw-videos";
+const processedVideoBucketName = "yt-cln-processed-videos";
 
 const localRawVideoPath = "./raw-videos";
 const localProcessedVideoPath = "./processed-videos";
