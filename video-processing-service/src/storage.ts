@@ -1,6 +1,11 @@
-import { Storage } from "@google-cloud/storage";
 import fs from "fs";
+
 import ffmpeg from "fluent-ffmpeg";
+import ffmpegInstaller from "@ffmpeg-installer/ffmpeg";
+
+import { Storage } from "@google-cloud/storage";
+
+ffmpeg.setFfmpegPath(ffmpegInstaller.path);
 
 const storage = new Storage();
 

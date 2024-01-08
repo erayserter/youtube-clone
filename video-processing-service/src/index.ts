@@ -1,8 +1,5 @@
 import express from "express";
 
-import ffmpeg from "fluent-ffmpeg";
-import ffmpegPath from "@ffmpeg-installer/ffmpeg";
-
 import {
   uploadProcessedVideo,
   downloadRawVideo,
@@ -17,8 +14,6 @@ setupDirectories();
 const app = express();
 
 app.use(express.json());
-
-ffmpeg.setFfmpegPath(ffmpegPath.path);
 
 // Process a video file from Cloud Storage into 360p
 app.post("/process-video", async (req, res) => {
@@ -63,4 +58,9 @@ app.post("/process-video", async (req, res) => {
   ]);
 
   return res.status(200).send("Processing finished successfully");
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
