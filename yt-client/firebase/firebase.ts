@@ -10,10 +10,10 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "your apiKey",
-  authDomain: "<your authDomain",
-  projectId: "<your projectId",
-  appId: "<your appId>",
+  apiKey: "AIzaSyCOo6evLHzSASar9YQOfdsPJliupCWYy84",
+  authDomain: "clone-ce0b0.firebaseapp.com",
+  projectId: "clone-ce0b0",
+  appId: "1:99280911634:web:db14fae5c5de72ce7d47cb",
 };
 
 // Initialize Firebase

@@ -1,5 +1,7 @@
+"use client";
+
 import { signInWithGoogle, signOut } from "@/firebase/firebase";
-import styles from "./signIn.module.css";
+import styles from "./sign-in.module.css";
 import { User } from "firebase/auth";
 
 interface SignInProps {
@@ -8,7 +10,7 @@ interface SignInProps {
 
 export function SignIn({ user }: SignInProps) {
   return (
-    <div>
+    <>
       {user ? (
         // If user is signed in, show a welcome message (or something else)
         <button className={styles.signin} onClick={signOut}>
@@ -20,6 +22,6 @@ export function SignIn({ user }: SignInProps) {
           Sign in
         </button>
       )}
-    </div>
+    </>
   );
 }
